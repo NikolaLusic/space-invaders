@@ -12,9 +12,9 @@ class Radar(Matrix):
     def __init__(self, input) -> None:
         super(Radar, self).__init__(input)
 
-    def generate_samples(self, width: int, height: int, overflow: int = None):
+    def generate_samples(self, width: int, height: int):
         """Generate all possible samples of the provided size, including the
-        smaller partial edge cases - down to the provided overflow size."""
+        smaller partial edge cases."""
         min_row_index = int(height / 2)
         previous_sample = None
         old_hash = None
